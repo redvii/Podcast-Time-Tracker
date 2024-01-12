@@ -5,12 +5,17 @@ class track():
     def __init__(self,name):
         self.name = name
         self.filepath = self.name + ".csv"
-        self.start_time = datetime.now()
-        self.id = 0
 
         if os.path.exists(self.filepath):
             print("A file with this podcast name already exists. You can still append notes to this file though.")
-        else:
+            import pandas as pd
+            df = pd.read_csv(self.filepath)
+            df["Datetime"] = pd.to_datetime(df['Datetime'])
+            self.start_time = df["Datetime"].min().to_pydatetime()
+            self.id = df["ID"].max()
+        else:        
+            self.start_time = datetime.now()
+            self.id = 0
             try:
                 with open(self.filepath, "w") as file:
                     file.write(f"ID,Datetime,Time Delta,Note\n{self.id},{self.start_time},0,Started podcast for {self.name}")

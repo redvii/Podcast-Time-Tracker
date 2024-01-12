@@ -1,4 +1,11 @@
 ID,Datetime,Time Delta,Note
 0,2024-01-12 00:38:48.467209,0,Started podcast for mypodcast
-1,2024-01-12 00:39:34.079965,00:00:45,('adding a note',)
+1,2024-01-12 00:39:34.079965,00:00:45,"adding a note"
 2,2024-01-12 00:39:57.969291,00:01:09,adding a second note!
+3,2024-01-12 00:54:36.896960,00:00:14,well these are my notes again
+4,2024-01-12 00:59:59.390187,00:00:15,these are my notes again yayyy
+5,2024-01-12 01:00:30.319380,00:00:46,djslfkdsjfkldsjflk
+6,2024-01-12 01:00:48.962791,00:01:05,fdslfj wow
+7,2024-01-12 01:00:55.194868,00:01:11,yippeeeehh
+8,2024-01-12 01:08:20.111736,00:29:31,hellloooo
+9,2024-01-12 01:08:33.438109,00:29:44,yippeers
