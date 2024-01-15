@@ -1,10 +1,12 @@
 import os
 from datetime import datetime
+import keyboard
 
 class track():
     def __init__(self,name):
         self.name = name
         self.filepath = self.name + ".csv"
+        self.shortcut_note = "ctrl+alt+f"
 
         if os.path.exists(self.filepath):
             print("A file with this podcast name already exists. You can still append notes to this file though.")
@@ -52,3 +54,12 @@ class track():
             print(f"Note added with ID {self.id}")
         except:
             print("Error: Could not write the note")
+
+    # function to keep taking notes until user types exit
+    def takenotes(self):
+        while True:
+            txt = input(f"Please enter your note for {self.id+1}, or type exit: ")
+            if txt == "exit":
+                break
+            else:
+                self.note(txt)
